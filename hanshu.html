@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>函数</title>
+</head>
+<body>
+	<script>
+	// 正方形表格
+	function table(rows,cols){
+		var i,j;
+			document.write('<table border=1 cellspacing=0 cellpadding=15>');
+			for(i=1;i<=rows;i+=1){
+				if(i%2==0){
+					document.write('<tr bgcolor=red>');
+				}else{
+					document.write('<tr style="background:green">');
+				}
+				
+				 for(var j=1;j<=cols;j+=1){
+		    	document.write('<td>'+i+'-'+j+'</td>');
+		    }
+				document.write('</tr>');
+		}
+			document.write('</table>');
+		}
+		// table(2,3)
+
+
+	// 金字塔
+  	function jinzita(rows){
+	var i,j,a;
+	for(i=1;i<=rows;i++){
+		for(a=0;a<=rows-i;a++){
+			document.write('-')
+		}
+		for(j=1;j<=2*i-1;j++){
+		 document.write('*');
+		}
+		document.write('<br>')
+	}
+	}
+	// jinzita(4)
+
+    // 数组中求最大值
+        function max1(arr1){
+		var max =14,i;
+		for(i=0;i<arr1.length;i++){
+			if(arr1[i]>max){
+				max=arr1[i];
+			}
+		}
+			console.log(max);
+        }
+        // max1()
+    // 数组去空
+    function arrqukong(arr2) {  
+ 	var arr2=[14,52,30,,72,36,44,89,,77,99,51];
+ 	var newarr=[],i;
+ 	for(i=0;i<arr2.length;i++){
+ 		if (arr[i]==undefined) {
+ 			continue;
+ 		}
+ 		 newarr[newarr.length]=arr2[i];
+ 	}
+ 	console.log(newarr);
+ 	} 
+ 	// arrqukong()
+
+// 数组排序
+        function arrpaixu(){
+		var arr3=[14,52,30,72,36,44,89,77,99,51];
+		for(i=0;i<arr3.length;i++){
+			for(j=i+1;j<arr3.length;j++){
+				if (arr3[i]>arr3[j]) {
+                    var temp=arr3[i];
+                    arr3[i]=arr3[j];
+                    arr3[j]=temp;
+				}
+			}
+		}
+			console.log(arr);
+        }
+        // arrpaixu()
+
+ 
+    // 二维数组求最大值
+  function arr4max(arr4){
+  var arr4 =[
+       [12,43,15],
+       [25,32,77],
+       [99,88,77]
+  ]
+  var i,j,max=12;
+   for(i=0;i<arr4.length;i++){
+   	  for(j=0;j<arr4[i].length;j++){
+   	  	if (arr4[i][j]>max) {
+   	  	max=arr4[i][j];
+   	  }
+   	  }
+   }
+   console.log(max);
+   }
+
+   // arr4max()
+ </script>
+
+</body>
+</html>
